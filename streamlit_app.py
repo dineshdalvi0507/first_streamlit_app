@@ -33,6 +33,3 @@ streamlit.dataframe(my_data_rows)
 
 rivery_fruit_choice = streamlit.text_input('What fruit would you like information about?','Jackfruit')
 streamlit.write('Thanks for adding ', rivery_fruit_choice)
-rivery_fruit_response = requests.get("https://fruityvice.com/api/fruit/"+rivery_fruit_choice)
-rivery_fruit_normalized = pandas.json_normalize(rivery_fruit_response.json())
-streamlit.dataframe(rivery_fruit_normalized)
